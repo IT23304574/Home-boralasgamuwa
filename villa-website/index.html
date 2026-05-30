@@ -14,13 +14,16 @@
 
     <header class="brand-header">
         <div class="header-container">
-            <div class="logo-wrapper">
-                <div class="logo-icon"></div>
-                <div class="logo-text">
-                    <h2>Jayasooriya GEM VILLA</h2>
-                    <p class="tagline">Boralasgamuwa</p>
-                </div>
-            </div>
+            <a href="#" class="logo-wrapper">
+                <img src="logo.jpeg" alt="Jayasooriya GEM VILLA Logo" class="logo-img">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active">Homepage</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#amenities" class="nav-link">Images of the Villa</a></li>
+                </ul>
+            </nav>
             <div class="header-contact">
                 <a href="tel:0763647060" class="contact-link"><i class="fa-solid fa-phone"></i> 076 364 7060</a>
             </div>
@@ -52,12 +55,10 @@
                     <img src="poolfirstimage.jpeg" alt="Private Pool" id="pool-slideshow">
                 </div>
                 <div class="caption">
-                    <h3>Private<br>Swimming<br>Pool</h3>
-                    <p class="room-desc">Dive into luxury with our private, temperature-controlled pool.</p>
-                    <p class="amenity-details">Crystal clear water with automated filtration systems. Features ambient LED lighting for night swimming and a private deck area.</p>
+                    <h3>Private Swimming Pool</h3>
                     <div class="card-features">
                         <span><i class="fa-solid fa-clock"></i> 24/7 Access</span>
-                        <span><i class="fa-solid fa-ruler-combined"></i> Size 2M x 1M</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> size 2M x 1M Width</span>
                     </div>
                 </div>
             </div>
@@ -67,9 +68,7 @@
                     <img src="bedroom1.jpeg" alt="Luxury Bedroom">
                 </div>
                 <div class="caption">
-                    <h3>LUXURY<br>BEDROOM<br>SUITE</h3>
-                    <p class="room-desc">Experience unparalleled comfort in our master suites.</p>
-                    <p class="amenity-details">Equipped with a premium orthopedic mattress and 400-thread-count Egyptian cotton linens. Includes a dedicated workspace and scenic garden views.</p>
+                    <h3>Luxury Bedroom Suite</h3>
                     <div class="card-features">
                         <span><i class="fa-solid fa-snowflake"></i> Full AC</span>
                         <span><i class="fa-solid fa-bed"></i> King Bed</span>
@@ -83,13 +82,10 @@
                     <img src="Kitchen1.jpeg" alt="Modern Kitchen">
                 </div>
                 <div class="caption">
-                    <h3>MODERN<br>GOURMET<br>KITCHEN</h3>
-                    <p class="room-desc">A chef's dream kitchen equipped with modern appliances.</p>
-                    <p class="amenity-details">Features a dual-door refrigerator, convection oven, and a built-in gas range. Fully stocked with premium cookware and a breakfast bar.</p>
+                    <h3>Modern Gourmet Kitchen</h3>
                     <div class="card-features">
                         <span><i class="fa-solid fa-utensils"></i> Equipped</span>
                         <span><i class="fa-solid fa-snowflake"></i> AC</span>
-                        <span><i class="fa-solid fa-bowl-food"></i> Dining</span>
                     </div>
                 </div>
             </div>
@@ -99,13 +95,10 @@
                     <img src="secondone.jpeg" alt="Luxury Bathroom" id="bathroom-slideshow">
                 </div>
                 <div class="caption">
-                    <h3>LUXURY<br>MODERN<br>BATHROOM</h3>
-                    <p class="room-desc">Rejuvenate in our spa-like bathrooms with premium fittings.</p>
-                    <p class="amenity-details">Spacious layout with marble countertops and a high-pressure rain shower. Includes an instant hot water system and luxury organic toiletries.</p>
+                    <h3>Luxury Modern Bathroom</h3>
                     <div class="card-features">
                         <span><i class="fa-solid fa-faucet-drip"></i> Hot Water</span>
                         <span><i class="fa-solid fa-shower"></i> Rain Shower</span>
-                        <span><i class="fa-solid fa-soap"></i> Toiletries</span>
                     </div>
                 </div>
             </div>
@@ -155,6 +148,13 @@
         setInterval(changeBackground, 3000);
 
         // First Amenity Card Image Slideshow
+        const poolImages = [
+            'firstone.jpeg',
+            'firsttwo.jpeg',
+            'firstthree.jpeg'
+        ];
+        const bathroomImages = ['secondone.jpeg', 'secondtwo.jpeg', 'secondthree.jpeg'];
+        
         const poolImg = document.getElementById('pool-slideshow');
         const lightbox = document.getElementById('pool-lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -162,11 +162,6 @@
         const nextBtn = document.getElementById('lightbox-next');
         const prevBtn = document.getElementById('lightbox-prev');
         const bathroomImg = document.getElementById('bathroom-slideshow');
-        const poolImages = [
-            'firstone.jpeg',
-            'firsttwo.jpeg',
-            'firstthree.jpeg'
-        ];
         let poolIndex = 0;
         let activeGallery = null; // Tracks which gallery is open in the lightbox
 
@@ -223,7 +218,6 @@
         };
 
         // Fourth Amenity Card Image Slideshow
-        const bathroomImages = ['secondone.jpeg', 'secondtwo.jpeg', 'secondthree.jpeg'];
         let bathroomIndex = 0;
 
         function changeBathroomImage() {
