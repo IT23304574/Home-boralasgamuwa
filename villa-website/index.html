@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayasooriya VILLA | Boralasgamuwa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="brand-header">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <h2>Jayasooriya GEM VILLA</h2>
+                    <p class="tagline">Boralasgamuwa</p>
+                </div>
+            </div>
+            <div class="header-contact">
+                <a href="tel:0763647060" class="contact-link"><i class="fa-solid fa-phone"></i> 076 364 7060</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner-container">
+        <section class="hero-titles">
+            <h1 class="main-title">MORE THAN A HOME</h1>
+            <p class="subtitle">Experience a Complete Lifestyle</p>
+            <div class="location-badge">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>500m to Boralasgamuwa Town</span>
+            </div>
+
+            <div class="location-action">
+                <a href="https://www.google.com/maps/search/?api=1&query=JMT+JEM+Villa,+116,+04B+Dehiwala+Rd,+Boralesgamuwa+10290" target="_blank" class="find-location-btn">Click here to find the location</a>
+            </div>
+
+            <div class="booking-cta">
+                <a href="#" class="book-btn"><i class="fa-solid fa-user-group"></i> Book Room for 2 People</a>
+                <a href="#" class="book-btn"><i class="fa-solid fa-users"></i> Book Room for 3 People</a>
+            </div>
+        </section>
+
+        <section class="amenities-grid">
+            <div class="amenity-card">
+                <div class="image-box">
+                    <img src="poolfirstimage.jpeg" alt="Private Pool" id="pool-slideshow">
+                </div>
+                <div class="caption">
+                    <h3>Private<br>Swimming<br>Pool</h3>
+                    <p class="room-desc">Dive into luxury with our private, temperature-controlled pool.</p>
+                    <p class="amenity-details">Crystal clear water with automated filtration systems. Features ambient LED lighting for night swimming and a private deck area.</p>
+                    <div class="card-features">
+                        <span><i class="fa-solid fa-clock"></i> 24/7 Access</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> Size 2M x 1M</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="amenity-card">
+                <div class="image-box">
+                    <img src="bedroom1.jpeg" alt="Luxury Bedroom">
+                </div>
+                <div class="caption">
+                    <h3>LUXURY<br>BEDROOM<br>SUITE</h3>
+                    <p class="room-desc">Experience unparalleled comfort in our master suites.</p>
+                    <p class="amenity-details">Equipped with a premium orthopedic mattress and 400-thread-count Egyptian cotton linens. Includes a dedicated workspace and scenic garden views.</p>
+                    <div class="card-features">
+                        <span><i class="fa-solid fa-snowflake"></i> Full AC</span>
+                        <span><i class="fa-solid fa-bed"></i> King Bed</span>
+                        <span><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="amenity-card">
+                <div class="image-box">
+                    <img src="Kitchen1.jpeg" alt="Modern Kitchen">
+                </div>
+                <div class="caption">
+                    <h3>MODERN<br>GOURMET<br>KITCHEN</h3>
+                    <p class="room-desc">A chef's dream kitchen equipped with modern appliances.</p>
+                    <p class="amenity-details">Features a dual-door refrigerator, convection oven, and a built-in gas range. Fully stocked with premium cookware and a breakfast bar.</p>
+                    <div class="card-features">
+                        <span><i class="fa-solid fa-utensils"></i> Equipped</span>
+                        <span><i class="fa-solid fa-snowflake"></i> AC</span>
+                        <span><i class="fa-solid fa-bowl-food"></i> Dining</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="amenity-card">
+                <div class="image-box">
+                    <img src="secondone.jpeg" alt="Luxury Bathroom" id="bathroom-slideshow">
+                </div>
+                <div class="caption">
+                    <h3>LUXURY<br>MODERN<br>BATHROOM</h3>
+                    <p class="room-desc">Rejuvenate in our spa-like bathrooms with premium fittings.</p>
+                    <p class="amenity-details">Spacious layout with marble countertops and a high-pressure rain shower. Includes an instant hot water system and luxury organic toiletries.</p>
+                    <div class="card-features">
+                        <span><i class="fa-solid fa-faucet-drip"></i> Hot Water</span>
+                        <span><i class="fa-solid fa-shower"></i> Rain Shower</span>
+                        <span><i class="fa-solid fa-soap"></i> Toiletries</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Lightbox Modal for Amenity Images -->
+    <div id="pool-lightbox" class="lightbox">
+        <span class="close-btn" id="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-nav">
+            <button class="lightbox-btn" id="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="lightbox-btn" id="lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2024 Jayasooriya GEM VILLA. | <a href="tel:0763647060" style="color: inherit; text-decoration: none;">076 364 7060</a></p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/94763647060" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const banner = document.querySelector('.banner-container');
+        const images = [
+            'homefullimage.jpeg',
+            'background1.jpeg',
+            'background2.jpeg',
+            'background3.jpeg'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % images.length;
+            const imageUrl = images[currentIndex];
+            // Updated to match the professional dark gradient in style.css
+            banner.style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.8) 100%), url('${imageUrl}')`;
+        }
+
+        setInterval(changeBackground, 3000);
+
+        // First Amenity Card Image Slideshow
+        const poolImg = document.getElementById('pool-slideshow');
+        const lightbox = document.getElementById('pool-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('lightbox-close');
+        const nextBtn = document.getElementById('lightbox-next');
+        const prevBtn = document.getElementById('lightbox-prev');
+        const bathroomImg = document.getElementById('bathroom-slideshow');
+        const poolImages = [
+            'firstone.jpeg',
+            'firsttwo.jpeg',
+            'firstthree.jpeg'
+        ];
+        let poolIndex = 0;
+        let activeGallery = null; // Tracks which gallery is open in the lightbox
+
+        function changePoolImage() {
+            if (!poolImg) return;
+            poolIndex = (poolIndex + 1) % poolImages.length;
+            const newSrc = poolImages[poolIndex];
+            poolImg.src = newSrc;
+            if (lightbox.style.display === 'flex' && activeGallery === 'pool') {
+                lightboxImg.src = newSrc;
+            }
+        }
+
+        setInterval(changePoolImage, 3000);
+
+        // Lightbox Interactivity
+        poolImg.addEventListener('click', () => {
+            activeGallery = 'pool';
+            lightbox.style.display = 'flex';
+            lightboxImg.src = poolImg.src;
+        });
+
+        bathroomImg.addEventListener('click', () => {
+            activeGallery = 'bathroom';
+            lightbox.style.display = 'flex';
+            lightboxImg.src = bathroomImg.src;
+        });
+
+        const closeLightbox = () => {
+            lightbox.style.display = 'none';
+            activeGallery = null;
+        };
+        closeBtn.onclick = closeLightbox;
+
+        const updateLightbox = (direction) => {
+            if (activeGallery === 'pool') {
+                poolIndex = (poolIndex + direction + poolImages.length) % poolImages.length;
+                const newSrc = poolImages[poolIndex];
+                lightboxImg.src = newSrc;
+                poolImg.src = newSrc;
+            } else if (activeGallery === 'bathroom') {
+                bathroomIndex = (bathroomIndex + direction + bathroomImages.length) % bathroomImages.length;
+                const newSrc = bathroomImages[bathroomIndex];
+                lightboxImg.src = newSrc;
+                bathroomImg.src = newSrc;
+            }
+        };
+
+        nextBtn.onclick = () => updateLightbox(1);
+        prevBtn.onclick = () => updateLightbox(-1);
+
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) closeLightbox();
+        };
+
+        // Fourth Amenity Card Image Slideshow
+        const bathroomImages = ['secondone.jpeg', 'secondtwo.jpeg', 'secondthree.jpeg'];
+        let bathroomIndex = 0;
+
+        function changeBathroomImage() {
+            if (!bathroomImg) return;
+            bathroomIndex = (bathroomIndex + 1) % bathroomImages.length;
+            const newSrc = bathroomImages[bathroomIndex];
+            bathroomImg.src = newSrc;
+            if (lightbox.style.display === 'flex' && activeGallery === 'bathroom') {
+                lightboxImg.src = newSrc;
+            }
+        }
+        setInterval(changeBathroomImage, 3000);
+    </script>
+</body>
+</html>
