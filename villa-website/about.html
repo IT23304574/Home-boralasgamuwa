@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Jayasooriya VILLA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="brand-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.jpeg" alt="Jayasooriya GEM VILLA Logo" class="logo-img">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Homepage</a></li>
+                    <li><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li><a href="index.html#amenities" class="nav-link">Images of the Villa</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <a href="tel:0763647060" class="contact-link"><i class="fa-solid fa-phone"></i> 076 364 7060</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner-container">
+        <section class="hero-titles">
+            <h1 class="main-title">ABOUT OUR VILLA</h1>
+            <p class="subtitle">Experience a Complete Lifestyle</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Our Story & Vision</h2>
+            <p>Welcome to Jayasooriya GEM VILLA, a sanctuary of luxury and comfort located just 500m from the vibrant Boralasgamuwa Town. We pride ourselves on offering an exceptional living experience that goes beyond standard accommodation.</p>
+            <p>Our villa is designed to be your home away from home, featuring a variety of room types—including Double Rooms, Deluxe Double Rooms, and our expansive 181m² Deluxe Villa. Each space is meticulously crafted with modern aesthetics and essential amenities like high-speed WiFi and full air conditioning.</p>
+            <p>Whether you're lounging by our 24/7 private swimming pool, preparing a feast in our gourmet kitchen, or enjoying the serenity of our landscaped surroundings, Jayasooriya GEM VILLA is committed to making your stay unforgettable. We invite you to experience the perfect blend of luxury, convenience, and Sri Lankan hospitality.</p>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2024 Jayasooriya GEM VILLA. | <a href="tel:0763647060" style="color: inherit; text-decoration: none;">076 364 7060</a></p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/94763647060" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const banner = document.querySelector('.banner-container');
+        const images = [
+            'homefullimage.jpeg',
+            'background1.jpeg',
+            'background2.jpeg',
+            'background3.jpeg'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % images.length;
+            const imageUrl = images[currentIndex];
+            banner.style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.8) 100%), url('${imageUrl}')`;
+        }
+
+        setInterval(changeBackground, 3000);
+    </script>
+</body>
+</html>

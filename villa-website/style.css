@@ -282,6 +282,64 @@ body {
     object-fit: cover;
 }
 
+/* ROOM TYPES STYLING */
+.room-types {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.room-option h4 {
+    color: #af9253;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+}
+
+.room-option p {
+    font-size: 12.5px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.room-option p i {
+    color: #af9253;
+    margin-right: 4px;
+    font-size: 11px;
+}
+
+/* ABOUT PAGE STYLING */
+.about-section {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(175, 146, 83, 0.3);
+    padding: 60px 50px;
+    border-radius: 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.about-section h2 {
+    color: #af9253;
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.about-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 25px;
+}
+
 /* FOOTER STYLING */
 .main-footer {
     background: #05070a;
@@ -413,5 +471,15 @@ body {
     .booking-cta {
         flex-direction: column;
         padding: 0 20px;
+    }
+    .about-section {
+        padding: 40px 20px;
+        margin: 0 15px;
+    }
+    .about-section h2 {
+        font-size: 24px;
+    }
+    .about-section p {
+        font-size: 15px;
     }
 }

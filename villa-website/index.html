@@ -14,13 +14,13 @@
 
     <header class="brand-header">
         <div class="header-container">
-            <a href="#" class="logo-wrapper">
+            <a href="index.html" class="logo-wrapper">
                 <img src="logo.jpeg" alt="Jayasooriya GEM VILLA Logo" class="logo-img">
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#" class="nav-link active">Homepage</a></li>
-                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="index.html" class="nav-link active">Homepage</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
                     <li><a href="#amenities" class="nav-link">Images of the Villa</a></li>
                 </ul>
             </nav>
@@ -49,7 +49,7 @@
             </div>
         </section>
 
-        <section class="amenities-grid">
+        <section class="amenities-grid" id="amenities">
             <div class="amenity-card">
                 <div class="image-box">
                     <img src="poolfirstimage.jpeg" alt="Private Pool" id="pool-slideshow">
@@ -65,14 +65,27 @@
 
             <div class="amenity-card">
                 <div class="image-box">
-                    <img src="bedroom1.jpeg" alt="Luxury Bedroom">
+                    <img src="thirdone.jpg" alt="Luxury Bedroom" id="room-slideshow">
                 </div>
                 <div class="caption">
-                    <h3>Luxury Bedroom Suite</h3>
-                    <div class="card-features">
-                        <span><i class="fa-solid fa-snowflake"></i> Full AC</span>
-                        <span><i class="fa-solid fa-bed"></i> King Bed</span>
-                        <span><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                <h3>Our Accommodations</h3>
+                <div class="room-types">
+                    <div class="room-option">
+                        <h4>Double Room</h4>
+                        <p><i class="fa-solid fa-user"></i> 1 Guest | <i class="fa-solid fa-expand"></i> 42m² | Double Bed, Private Balcony, A/C, Private Entrance & Dining Area</p>
+                    </div>
+                    <div class="room-option">
+                        <h4>Deluxe Double Room</h4>
+                        <p><i class="fa-solid fa-users"></i> 2 Guests | <i class="fa-solid fa-expand"></i> 51m² | 2 Large Double Beds, Scenic Views, A/C & Private Entrance</p>
+                    </div>
+                    <div class="room-option">
+                        <h4>Deluxe Room</h4>
+                        <p><i class="fa-solid fa-users"></i> 2 Guests | <i class="fa-solid fa-expand"></i> 42m² | Large Double Bed, A/C, Private Entrance & Shared Bathroom</p>
+                    </div>
+                    <div class="room-option">
+                        <h4>Deluxe Villa</h4>
+                        <p><i class="fa-solid fa-house"></i> Entire Villa | <i class="fa-solid fa-expand"></i> 181m² | A/C, Tea/Coffee Maker, Private Entrance & Shared Bath</p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -153,16 +166,22 @@
             'firsttwo.jpeg',
             'firstthree.jpeg'
         ];
+        const roomImages = ['thirdone.jpg', 'thirdtwo.jpeg'];
         const bathroomImages = ['secondone.jpeg', 'secondtwo.jpeg', 'secondthree.jpeg'];
         
         const poolImg = document.getElementById('pool-slideshow');
+        const roomImg = document.getElementById('room-slideshow');
+        const bathroomImg = document.getElementById('bathroom-slideshow');
+
         const lightbox = document.getElementById('pool-lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.getElementById('lightbox-close');
         const nextBtn = document.getElementById('lightbox-next');
         const prevBtn = document.getElementById('lightbox-prev');
-        const bathroomImg = document.getElementById('bathroom-slideshow');
+
         let poolIndex = 0;
+        let roomIndex = 0;
+        let bathroomIndex = 0;
         let activeGallery = null; // Tracks which gallery is open in the lightbox
 
         function changePoolImage() {
@@ -177,11 +196,29 @@
 
         setInterval(changePoolImage, 3000);
 
+        function changeRoomImage() {
+            if (!roomImg) return;
+            roomIndex = (roomIndex + 1) % roomImages.length;
+            const newSrc = roomImages[roomIndex];
+            roomImg.src = newSrc;
+            if (lightbox.style.display === 'flex' && activeGallery === 'room') {
+                lightboxImg.src = newSrc;
+            }
+        }
+
+        setInterval(changeRoomImage, 3000);
+
         // Lightbox Interactivity
         poolImg.addEventListener('click', () => {
             activeGallery = 'pool';
             lightbox.style.display = 'flex';
             lightboxImg.src = poolImg.src;
+        });
+
+        roomImg.addEventListener('click', () => {
+            activeGallery = 'room';
+            lightbox.style.display = 'flex';
+            lightboxImg.src = roomImg.src;
         });
 
         bathroomImg.addEventListener('click', () => {
@@ -202,6 +239,11 @@
                 const newSrc = poolImages[poolIndex];
                 lightboxImg.src = newSrc;
                 poolImg.src = newSrc;
+            } else if (activeGallery === 'room') {
+                roomIndex = (roomIndex + direction + roomImages.length) % roomImages.length;
+                const newSrc = roomImages[roomIndex];
+                lightboxImg.src = newSrc;
+                roomImg.src = newSrc;
             } else if (activeGallery === 'bathroom') {
                 bathroomIndex = (bathroomIndex + direction + bathroomImages.length) % bathroomImages.length;
                 const newSrc = bathroomImages[bathroomIndex];
@@ -218,8 +260,6 @@
         };
 
         // Fourth Amenity Card Image Slideshow
-        let bathroomIndex = 0;
-
         function changeBathroomImage() {
             if (!bathroomImg) return;
             bathroomIndex = (bathroomIndex + 1) % bathroomImages.length;
